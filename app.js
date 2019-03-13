@@ -1,3 +1,5 @@
+const login = require('./api/login');
+
 //app.js
 App({
   onLaunch() {
@@ -11,6 +13,9 @@ App({
       success: (res) => {
         console.log('wx.login', res);
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        login.getToken(res.code).then((res) => {
+          console.log(res);
+        });
       },
     });
     // 获取用户信息

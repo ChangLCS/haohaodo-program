@@ -1,11 +1,9 @@
 const apiCommon = require('../modules/wx-api-common/api/index');
+console.log('fdafds', apiCommon);
 
-export default apiCommon.setOption({
+const api = apiCommon.setOption({
   baseUrl: 'http://localhost:3000', //  接口的基础地址配置
-  params: {
-    //  基础参数，即每次调用都要传的参
-    access_token: 'access_token',
-  },
+  params: {},
   request: (req) => {
     //  请求拦截器
   },
@@ -13,3 +11,16 @@ export default apiCommon.setOption({
     //  回调拦截器
   },
 });
+
+const path = {
+  getToken: '/get/token',
+};
+
+const getToken = (code) =>
+  api.get(path.getToken, {
+    code,
+  });
+
+module.exports = {
+  getToken,
+};
