@@ -8,6 +8,13 @@ export default apiCommon.setOption({
   },
   request: (req) => {
     //  请求拦截器
+    return {
+      ...req,
+      params: {
+        ...req.params,
+        accessToken: config.getToken(),
+      },
+    };
   },
   response: (res) => {
     //  回调拦截器

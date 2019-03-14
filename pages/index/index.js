@@ -46,6 +46,9 @@ Page({
   getUserInfo: function(e) {
     console.log(e);
     app.globalData.userInfo = e.detail.userInfo;
+
+    app.getWXUserInfo();
+
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
