@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "miniprogram-sm-crypto": "0.0.6",
-    "wx-api-common": "^1.0.6"
+    "wx-api-common": "^1.0.7"
   }
 }

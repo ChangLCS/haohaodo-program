@@ -1,5 +1,4 @@
-const apiCommon = require('../modules/wx-api-common/api/index');
-console.log('fdafds', apiCommon);
+import apiCommon from 'wx-api-common';
 
 const api = apiCommon.setOption({
   baseUrl: 'http://localhost:3000', //  接口的基础地址配置

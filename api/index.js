@@ -1,4 +1,4 @@
-const apiCommon = require('../modules/wx-api-common/api/index');
+import apiCommon from 'wx-api-common';
 
 export default apiCommon.setOption({
   baseUrl: 'http://localhost:3000', //  接口的基础地址配置
