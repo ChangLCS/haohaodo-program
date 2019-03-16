@@ -1,6 +1,8 @@
 import login from './api/login';
 import config from './config';
 
+import getMovie from './api/getMovie';
+
 //app.js
 App({
   onLaunch() {
@@ -62,6 +64,12 @@ App({
     console.log(config.getToken());
     login.setUserInfo(data).then((res) => {
       console.log(res);
+    });
+
+    getMovie.getRand().then((res) => {
+      if (res.data.code === 0) {
+        console.log(res.data.result);
+      }
     });
   },
 });
