@@ -12,7 +12,7 @@ App({
     // 登录
     wx.login({
       success: (res) => {
-        console.log('wx.login', res);
+        config.setToken();
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         login.getToken(res.code).then((res) => {
           if (res.data.code === 0) {
@@ -44,7 +44,6 @@ App({
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo;
 
-              console.log('getWXUserInfo', res);
               this.saveInfo(res);
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回

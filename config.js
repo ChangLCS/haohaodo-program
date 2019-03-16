@@ -12,6 +12,7 @@ const getToken = () => {
 };
 
 export default {
+  apiHost: 'https://api.haohaodo.com',
   setToken,
   getToken,
 };
