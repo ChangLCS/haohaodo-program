@@ -6,11 +6,6 @@ import getMovie from './api/getMovie';
 //app.js
 App({
   onLaunch() {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || [];
-    logs.unshift(Date.now());
-    wx.setStorageSync('logs', logs);
-
     // 登录
     wx.login({
       success: (res) => {
@@ -61,9 +56,14 @@ App({
   },
   //  存储数据
   saveInfo(data) {
-    console.log(config.getToken());
     login.setUserInfo(data).then((res) => {
-      console.log(res);
+      if (res.data.code === 0) {
+        setTimeout(() => {
+          wx.navigateTo({
+            url: '../list/list',
+          });
+        }, 500);
+      }
     });
 
     getMovie.getRand().then((res) => {
