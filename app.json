@@ -1,9 +1,10 @@
 {
-  "pages": ["pages/index/index", "pages/list/list"],
+  "pages": ["pages/index/index", "pages/list/index"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#42BD56",
     "navigationBarTitleText": "树洞的电影推荐",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
   }
 }

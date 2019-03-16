@@ -60,7 +60,7 @@ App({
       if (res.data.code === 0) {
         setTimeout(() => {
           wx.navigateTo({
-            url: '../list/list',
+            url: '../list/index',
           });
         }, 500);
       }

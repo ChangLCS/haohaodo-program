@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view>
+  <view class="iconfont icon-fanhui"></view>
+  <view class="iconfont icon-home"></view>
+  <view>你好</view>
+</view>
