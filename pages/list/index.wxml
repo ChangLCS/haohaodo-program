@@ -3,7 +3,7 @@
   <nav-bar isHome="true" title="{{ title }}"></nav-bar>
   <view class="main">
     <form class="form" bindsubmit="goSearch">
-      <input class="form-input" type="text" name="value" placeholder="电影搜一搜" confirm-type="search"></input>
+      <input class="form-input" type="text" name="value" placeholder="电影搜一搜" confirm-type="search" bindconfirm="goSearch"></input>
       <button form-type="submit" class="form-btn iconfont icon-search"></button>
     </form>
     <view
