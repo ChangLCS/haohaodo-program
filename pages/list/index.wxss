@@ -3,6 +3,41 @@
   padding: 0 40rpx;
 }
 
+.form {
+  position: relative;
+  display: block;
+  z-index: 1;
+  margin-bottom: 40rpx;
+}
+
+.form-input {
+  position: relative;
+  display: block;
+  z-index: 1;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  padding: 0 110rpx 0 30rpx;
+  font-size: 32rpx;
+}
+
+.form-btn {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #42BD56;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
 .item {
   margin-bottom: 40rpx;
   display: flex;

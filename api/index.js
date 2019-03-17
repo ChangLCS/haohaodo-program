@@ -26,6 +26,7 @@ export default apiCommon.setOption({
       wx.showToast({
         title: res.data.message,
         icon: 'loading',
+        mask: true,
       });
     }
   },
