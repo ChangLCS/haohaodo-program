@@ -11,6 +11,12 @@ const getRand = (page) =>
     page,
   });
 
+const getMovieItem = (id) =>
+  api.get(path.getMovieItem, {
+    id,
+  });
+
 export default {
   getRand,
+  getMovieItem,
 };

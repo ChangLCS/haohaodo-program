@@ -1,8 +1,36 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.main {
+  position: relative;
+  margin-top: 40rpx;
+  padding: 0 40rpx;
 }
-.log-item {
-  margin: 10rpx;
+
+.main-img {
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+  width: 220rpx;
+  height: 300rpx;
+  box-shadow: rgba(0, 0, 0, .2) 0 10rpx 20rpx;
+}
+
+.main-rating {
+  position: absolute;
+  top: 0;
+  right: 60rpx;
+  text-align: center;
+  color: #fc0;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 100rpx;
+  line-height: 120rpx;
+  text-shadow: rgba(0, 0, 0, .2) 0 10rpx 20rpx;
+}
+
+.main-info {
+  padding-top: 130rpx;
+}
+
+.main-info-ct {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, .2) 0 10rpx 20rpx;
 }

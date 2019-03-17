@@ -19,9 +19,11 @@ Component({
   },
   methods: {
     _back() {
+      console.log('erwrewr');
       wx.navigateBack({
         delta: 1,
       });
+      this.triggerEvent('home', { name: 'home' });
     },
     _home() {
       // this.triggerEvent('home', { name: 'home' });

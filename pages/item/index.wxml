@@ -1,6 +1,40 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<!--item-->
+<view>
+  <nav-bar title="电影详情" isBack="true" isHome="true"></nav-bar>
+  <!-- <view class="main">
+    <image class="main-img" src="{{ data.images }}"></image>
+    <view class="main-rating">
+      <text>{{ data.rating }}</text>
+    </view>
+    <view class="main-info">
+      <view class="main-info-ct">
+        <view>
+          <view>
+            <text>{{ data.title }}</text>
+            <text>{{ data.original_title }}</text>
+            <text>{{ data.aka }}</text>
+            <text>({{ data.years }}){{ data.countries }}</text>
+            <text>
+              <text
+                class="item-info-genres"
+                wx:for="{{ data.genresArr }}"
+                wx:for-index="index"
+                wx:for-item="item"
+                wx:key="{{ item }}"
+                >{{ item }}</text
+              >
+            </text>
+          </view>
+        </view>
+        <view>
+          <text>简介</text>
+          <text>{{ data.summary }}</text>
+        </view>
+        <view>
+          <text>影人</text>
+          <view></view>
+        </view>
+      </view>
+    </view>
+  </view> -->
 </view>

@@ -58,9 +58,9 @@ App({
     login.setUserInfo(data).then((res) => {
       if (res.data.code === 0) {
         setTimeout(() => {
-          wx.navigateTo({
-            url: '/pages/list/index?type=home',
-          });
+          // wx.navigateTo({
+          //   url: '/pages/list/index?type=home',
+          // });
         }, 1000);
       }
     });

@@ -1,4 +1,4 @@
-<!--logs.wxml-->
+<!--list-->
 <view>
   <nav-bar isHome="true" title="{{ title }}"></nav-bar>
   <view class="main">

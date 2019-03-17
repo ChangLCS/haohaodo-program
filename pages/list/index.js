@@ -27,7 +27,6 @@ Page({
     }
   },
   onReachBottom() {
-    console.log('this.page', this.page);
     this.setData({
       page: this.data.page + 1,
     });
@@ -47,7 +46,9 @@ Page({
       }
     });
   },
-  goItem(data) {
-    console.log('item', data);
+  goItem(e) {
+    wx.navigateTo({
+      url: `/pages/item/index?id=${e.currentTarget.dataset.data.id}`,
+    });
   },
 });
