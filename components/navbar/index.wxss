@@ -1,36 +1,39 @@
 /**index.wxss**/
 
 @import '/lib/iconfont/iconfont.wxss';
-.userinfo {
-  margin-top: 200rpx;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  overflow: hidden;
+  padding: 50rpx 20rpx 0;
+  width: 100%;
+  height: 68rpx;
+  background-color: #42BD56;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 0 auto;
-  border-radius: 50%;
-  display: block;
-  border: 10rpx solid #fff;
+.navbar-height {
+  height: 118rpx;
 }
 
-.login {
-  display: block;
-  margin: 20rpx auto;
-  color: #42BD56;
+.navbar-icon {
+  position: relative;
+  z-index: 10;
+  float: left;
+  line-height: 68rpx;
+  width: 80rpx;
   text-align: center;
-  width: 80%;
-  height: 100rpx;
-  border-radius: 50rpx;
+  font-size: 40rpx;
 }
 
-.userinfo-nickname {
-  display: block;
-  margin: 20rpx auto;
-  color: #42BD56;
+.navbar-title {
+  position: absolute;
+  z-index: 10;
+  top: 50rpx;
+  left: 0;
   text-align: center;
-  width: 80%;
-  line-height: 100rpx;
-  border-radius: 50rpx;
-  background-color: #fff;
+  width: 100%;
+  line-height: 68rpx;
+  font-size: 32rpx;
 }

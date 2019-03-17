@@ -1,6 +1,9 @@
 <!--index.wxml-->
 <view>
-  <view class="iconfont icon-fanhui"></view>
-  <view class="iconfont icon-home"></view>
-  <view>你好</view>
+  <view class="navbar">
+    <view wx:if="{{ isBack }}" bindtap="_back" class="navbar-icon iconfont icon-fanhui"></view>
+    <view wx:if="{{ isHome }}" bindtap="_home" class="navbar-icon iconfont icon-home"></view>
+    <view class="navbar-title">{{ title }}</view>
+  </view>
+  <view class="navbar-height"></view>
 </view>

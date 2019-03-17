@@ -1,7 +1,6 @@
 import login from './api/login';
 import config from './config';
 
-import getMovie from './api/getMovie';
 
 //app.js
 App({
@@ -60,16 +59,11 @@ App({
       if (res.data.code === 0) {
         setTimeout(() => {
           wx.navigateTo({
-            url: '../list/index',
+            url: '/pages/list/index?type=home',
           });
-        }, 500);
+        }, 1000);
       }
     });
 
-    getMovie.getRand().then((res) => {
-      if (res.data.code === 0) {
-        console.log(res.data.result);
-      }
-    });
   },
 });

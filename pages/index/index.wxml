@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <nav-bar title="树洞的电影推荐"></nav-bar>
   <view class="userinfo">
     <image
       bindtap="bindViewTap"

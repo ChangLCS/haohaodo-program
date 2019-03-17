@@ -6,7 +6,10 @@ const path = {
   getSearch: '/get/search',
 };
 
-const getRand = () => api.get(path.getRand);
+const getRand = (page) =>
+  api.get(path.getRand, {
+    page,
+  });
 
 export default {
   getRand,

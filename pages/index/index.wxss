@@ -1,5 +1,15 @@
 /**index.wxss**/
 
+.container {
+  box-sizing: border-box;
+  background-color: #42BD56;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .userinfo {
   margin-top: 200rpx;
 }

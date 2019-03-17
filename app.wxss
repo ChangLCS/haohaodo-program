@@ -1,12 +1,7 @@
 /**app.wxss**/
 
 @import './lib/iconfont/iconfont.wxss';
-.container {
+page {
   box-sizing: border-box;
   background-color: #42BD56;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }

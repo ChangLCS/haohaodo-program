@@ -1,7 +1,35 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <nav-bar></nav-bar>
-  <block wx:for="{{ logs }}" wx:for-item="log">
-    <text class="log-item">{{ index + 1 }}. {{ log }}</text>
-  </block>
+<view>
+  <nav-bar isHome="true" title="{{ title }}"></nav-bar>
+  <view class="main">
+    <view
+      class="item"
+      bind:tap="goItem"
+      data-data="{{ item }}"
+      wx:for="{{ list }}"
+      wx:for-index="index"
+      wx:for-item="item"
+      wx:key="{{ item.id }}"
+    >
+      <image class="item-img" lazy-load="true" src="{{ item.images }}"></image>
+      <view class="item-info">
+        <text class="item-text item-info-title">{{ item.title }}</text>
+        <text class="item-text item-info-original">{{ item.original_title }}</text>
+        <text class="item-text item-info-yaers">{{ item.years }}</text>
+        <text class="item-text">
+          <text
+            class="item-info-genres"
+            wx:for="{{ item.genresArr }}"
+            wx:for-index="itemIndex"
+            wx:for-item="itemSon"
+            wx:key="{{ itemSon }}"
+            >{{ itemSon }}</text
+          >
+        </text>
+      </view>
+      <view class="item-rating">
+        <text>{{ item.rating }}</text>
+      </view>
+    </view>
+  </view>
 </view>

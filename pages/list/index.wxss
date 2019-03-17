@@ -1,8 +1,67 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.main {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
 }
-.log-item {
-  margin: 10rpx;
+
+.item {
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.item-img {
+  flex: 4;
+  width: 0;
+  height: 300rpx;
+}
+
+.item-info {
+  width: 0;
+  flex: 6;
+  padding: 20rpx;
+}
+
+.item-text {
+  display: block;
+  line-height: 60rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+
+.item-info-title {
+  color: #000;
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+}
+
+.item-info-original {
+  color: #999;
+}
+
+.item-info-yaers {
+  color: #f60;
+}
+
+.item-info-genres {
+  color: #0af;
+  border: 1px solid #0af;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+  border-radius: 4rpx;
+}
+
+.item-rating {
+  flex: 2;
+  display: flex;
+  width: 0;
+  align-items: center;
+  text-align: center;
+  color: #fc0;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 50rpx;
 }
