@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  margin-top: 40rpx;
+  margin: 40rpx auto;
   padding: 0 40rpx;
 }
 
@@ -9,7 +9,7 @@
   top: 0;
   left: 40rpx;
   width: 220rpx;
-  height: 300rpx;
+  height: 310rpx;
   box-shadow: rgba(0, 0, 0, .2) 0 10rpx 20rpx;
 }
 
@@ -33,4 +33,96 @@
 .main-info-ct {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, .2) 0 10rpx 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.main-info-first {
+  padding: 30rpx 30rpx 0 250rpx;
+}
+
+.main-info-first-title {
+  display: block;
+  color: #333;
+  font-size: 50rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+
+.main-info-first-original {
+  display: block;
+  color: #999;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.main-info-second {
+  margin-top: 50rpx;
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+
+.main-info-second-aka {
+  display: block;
+  color: #666;
+}
+
+.main-info-second-years {
+  display: block;
+  color: #f60;
+}
+
+.item-info-genres {
+  color: #0af;
+  border: 1px solid #0af;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+  border-radius: 4rpx;
+}
+
+.main-info-subtitle {
+  display: block;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+
+.main-info-summary {
+  margin-top: 40rpx;
+  padding: 0 30rpx;
+  color: #333;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+
+.main-info-person {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.main-info-person-item {
+  display: inline-block;
+  margin-right: 30rpx;
+  width: 240rpx;
+  white-space: normal;
+  vertical-align: top;
+}
+
+.main-info-person-item image {
+  display: block;
+  width: 240rpx;
+  height: 320rpx;
+  box-shadow: rgba(0, 0, 0, .5) 5rpx 0 10rpx;
+}
+
+.main-info-person-item-type {
+  display: block;
+  color: #999;
+}
+
+.main-info-person-item-name {
+  display: block;
+  color: #333;
 }

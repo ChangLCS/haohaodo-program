@@ -1,40 +1,54 @@
 <!--item-->
 <view>
-  <nav-bar title="电影详情" isBack="true" isHome="true"></nav-bar>
-  <!-- <view class="main">
+  <nav-bar title="电影详情" isBack="true"></nav-bar>
+  <view class="main">
     <image class="main-img" src="{{ data.images }}"></image>
     <view class="main-rating">
       <text>{{ data.rating }}</text>
     </view>
     <view class="main-info">
       <view class="main-info-ct">
-        <view>
-          <view>
-            <text>{{ data.title }}</text>
-            <text>{{ data.original_title }}</text>
-            <text>{{ data.aka }}</text>
-            <text>({{ data.years }}){{ data.countries }}</text>
-            <text>
-              <text
-                class="item-info-genres"
-                wx:for="{{ data.genresArr }}"
-                wx:for-index="index"
-                wx:for-item="item"
-                wx:key="{{ item }}"
-                >{{ item }}</text
-              >
-            </text>
-          </view>
+        <view class="main-info-first">
+          <text class="main-info-first-title">{{ data.title }}</text>
+          <text class="main-info-first-original">{{ data.original_title }}</text>
         </view>
-        <view>
-          <text>简介</text>
+        <view class="main-info-second">
+          <text class="main-info-second-aka">别名：{{ data.aka }}</text>
+          <text class="main-info-second-years">({{ data.years }}){{ data.countries }}</text>
+          <text>
+            <text
+              class="item-info-genres"
+              wx:for="{{ data.genresArr }}"
+              wx:for-index="index"
+              wx:for-item="item"
+              wx:key="{{ item }}"
+              >{{ item }}</text
+            >
+          </text>
+        </view>
+        <view class="main-info-summary">
+          <text class="main-info-subtitle">电影简介</text>
           <text>{{ data.summary }}</text>
         </view>
-        <view>
-          <text>影人</text>
-          <view></view>
+        <view class="main-info-summary">
+          <text class="main-info-subtitle">主要影人</text>
+          <scroll-view class="main-info-person" scroll-x="true">
+            <view
+              class="main-info-person-item"
+              wx:for="{{ data.person }}"
+              wx:for-index="index"
+              wx:for-item="item"
+              wx:key="{{ index }}"
+            >
+              <image src="{{ item.images }}"></image>
+              <text class="main-info-person-item-type">{{
+                item.type === 1 ? '导演' : '演员'
+              }}</text>
+              <text class="main-info-person-item-name">{{ item.name }}</text>
+            </view>
+          </scroll-view>
         </view>
       </view>
     </view>
-  </view> -->
+  </view>
 </view>

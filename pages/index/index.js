@@ -44,12 +44,16 @@ Page({
   },
   getUserInfo(e) {
     app.globalData.userInfo = e.detail.userInfo;
-
     app.getWXUserInfo();
-
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
+    });
+  },
+  //  前往推荐页
+  goRand() {
+    wx.navigateTo({
+      url: '/pages/list/index?type=home',
     });
   },
 });

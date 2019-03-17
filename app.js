@@ -1,7 +1,6 @@
 import login from './api/login';
 import config from './config';
 
-
 //app.js
 App({
   onLaunch() {
@@ -39,9 +38,7 @@ App({
             success: (res) => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo;
-
               this.saveInfo(res);
-
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -58,12 +55,11 @@ App({
     login.setUserInfo(data).then((res) => {
       if (res.data.code === 0) {
         setTimeout(() => {
-          // wx.navigateTo({
-          //   url: '/pages/list/index?type=home',
-          // });
+          wx.navigateTo({
+            url: '/pages/list/index?type=home',
+          });
         }, 1000);
       }
     });
-
   },
 });

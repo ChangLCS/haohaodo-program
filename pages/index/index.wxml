@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <nav-bar title="树洞的电影推荐" isBack="true" isHome="true"></nav-bar>
+  <nav-bar title="树洞的电影推荐"></nav-bar>
   <view class="userinfo">
     <image
       bindtap="bindViewTap"
@@ -12,10 +12,10 @@
       class="login"
       wx:if="{{ !hasUserInfo && canIUse }}"
       open-type="getUserInfo"
-      bindgetuserinfo="getUserInfo"
+      bind:getuserinfo="getUserInfo"
     >
       戳我看一看
     </button>
-    <text wx:else class="userinfo-nickname">Hello，{{ userInfo.nickName }}</text>
+    <text bind:tap="goRand" wx:else class="userinfo-nickname">Hello，{{ userInfo.nickName }}</text>
   </view>
 </view>

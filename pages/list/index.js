@@ -1,6 +1,3 @@
-//logs.js
-const util = require('../../utils/util.js');
-
 import getMovie from '../../api/getMovie';
 
 Page({
@@ -11,11 +8,6 @@ Page({
   },
   onLoad(params) {
     this.getList(params);
-    // this.setData({
-    //   logs: (wx.getStorageSync('logs') || []).map((log) => {
-    //     return util.formatTime(new Date(log));
-    //   }),
-    // });
   },
   getList(params) {
     switch (params.type) {

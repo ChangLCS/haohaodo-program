@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9;
   color: #fff;
   overflow: hidden;
   padding: 50rpx 20rpx 0;
@@ -29,7 +30,7 @@
 
 .navbar-title {
   position: absolute;
-  z-index: 10;
+  z-index: -1;
   top: 50rpx;
   left: 0;
   text-align: center;
