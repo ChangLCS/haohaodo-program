@@ -15,11 +15,16 @@
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
+  width: 150rpx;
+  height: 150rpx;
   margin: 0 auto;
   border-radius: 50%;
   display: block;
+  border: 10rpx solid #42BD56;
+  box-sizing: border-box;
+}
+
+.userinfo-avatar-border {
   border: 10rpx solid #fff;
 }
 

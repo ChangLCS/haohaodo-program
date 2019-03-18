@@ -13,6 +13,7 @@ const getToken = () => {
 
 export default {
   apiHost: 'https://api.haohaodo.com',
+  // apiHost: 'http://localhost:3000',
   setToken,
   getToken,
 };

@@ -11,6 +11,7 @@
   width: 220rpx;
   height: 310rpx;
   box-shadow: rgba(0, 0, 0, .2) 0 10rpx 20rpx;
+  background-color: #fff;
 }
 
 .main-rating {

@@ -29,20 +29,16 @@ Page({
           hasUserInfo: true,
         });
       };
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: (res) => {
-          app.globalData.userInfo = res.userInfo;
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true,
-          });
-        },
-      });
     }
   },
   getUserInfo(e) {
+    if (!e.detail.userInfo) {
+      wx.showToast({
+        title: '请授权登录使用',
+        icon: 'loading',
+      });
+      return;
+    }
     app.globalData.userInfo = e.detail.userInfo;
     app.getWXUserInfo();
     this.setData({
