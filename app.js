@@ -3,7 +3,14 @@ import config from './config';
 
 //app.js
 App({
-  onLaunch() {
+  onLaunch(params) {
+    this.route = params;
+    if (this.route.path === 'pages/item/index') {
+      wx.redirectTo({
+        url: '/pages/index/index',
+      });
+    }
+
     // 登录
     wx.login({
       success: (res) => {
@@ -24,6 +31,7 @@ App({
       },
     });
   },
+  route: null,
   globalData: {
     userInfo: null,
   },
@@ -56,10 +64,14 @@ App({
     login.setUserInfo(data).then((res) => {
       if (res.data.code === 0) {
         setTimeout(() => {
+          let url = '/pages/list/index?type=home';
+          if (this.route.path === 'pages/item/index') {
+            url = `/${this.route.path}?id=${this.route.query.id}`;
+          }
           wx.navigateTo({
-            url: '/pages/list/index?type=home',
+            url,
           });
-        }, 1000);
+        }, 500);
       }
     });
   },

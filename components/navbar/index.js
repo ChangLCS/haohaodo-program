@@ -19,7 +19,6 @@ Component({
   },
   methods: {
     _back() {
-      console.log('_back');
       wx.navigateBack();
     },
     _home() {

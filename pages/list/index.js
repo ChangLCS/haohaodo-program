@@ -49,7 +49,6 @@ Page({
   goSearch(e) {
     //  点搜索按钮是 e.detail.value.value，直接在键盘完成搜索是 e.detail.value
     const value = e.detail.value.value || e.detail.value;
-    console.log(JSON.stringify(e), value);
     if (!value && value !== 0) {
       wx.showToast({
         title: '请输入要搜索的关键字',
